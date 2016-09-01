@@ -1,0 +1,30 @@
+{
+  "name": "Angular2NodeExpressJS",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "tsc -p public/ && concurrently \"npm run tsc:w\" \"nodemon ./bin/www\" ",
+    "postinstall": "typings install && cd public && npm install && cd .. && npm start",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w -p public/",
+    "typings": "typings"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "bootstrap": "^3.3.6",
+    "concurrently": "^2.0.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "express-session": "^1.14.1",
+    "jade": "~1.11.0",
+    "mongoose": "^4.5.10",
+    "morgan": "~1.7.0",
+    "nodemon": "^1.10.2",
+    "serve-favicon": "~2.3.0",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
+  },
+  "server_address": "127.0.0.1",
+  "server_port": "3002"
+}
