@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "tsc -p public/ && concurrently \"npm run tsc:w\" \"nodemon ./bin/www\" ",
+    "start": "tsc -p public/ && concurrently \"npm run tsc:w\" \"node ./bin/www\"",
     "postinstall": "cd public && npm install && typings install && cd .. && npm start",
     "tsc": "tsc",
     "tsc:w": "tsc -w -p public/",
@@ -20,7 +20,7 @@
     "jade": "~1.11.0",
     "mongoose": "^4.5.10",
     "morgan": "~1.7.0",
-    "nodemon": "^1.10.2",
+    "open": "0.0.5",
     "serve-favicon": "~2.3.0",
     "typescript": "^1.8.10",
     "typings": "^1.0.4"
