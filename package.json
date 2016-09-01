@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "tsc -p public/ && concurrently \"npm run tsc:w\" \"nodemon ./bin/www\" ",
-    "postinstall": "typings install && cd public && npm install && cd .. && npm start",
+    "postinstall": "cd public && npm install && typings install && cd .. && npm start",
     "tsc": "tsc",
     "tsc:w": "tsc -w -p public/",
     "typings": "typings"
